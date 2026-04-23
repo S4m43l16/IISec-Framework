@@ -1,0 +1,17 @@
+{
+  "inputs":[
+    {
+      "id": "context7ApiKey",
+      "type": "promptString",
+      "description": "Your Context7 API Key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp", "--api-key", "${input:context7ApiKey}"],
+    }
+  }
+}
